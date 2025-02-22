@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - #Next Stop</title>
+    <link rel="shortcut icon" href="/Assets/logos/N (3).png" type="image/x-icon">
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #b71c1c;
+        }
+
+        /* Input Field */
+        .wishlist-input {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #b71c1c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Wishlist Container */
+        .wishlist-container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Wishlist Items */
+        .wishlist-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffebee;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .wishlist-item span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .remove-btn {
+            background: #d32f2f;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .remove-btn:hover {
+            background: #ff4444;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌍 Travel Wishlist</h1>
+
+    <!-- Input for adding destinations -->
+    <div class="wishlist-input">
+        <input type="text" id="destination" placeholder="Enter destination...">
+        <button onclick="addToWishlist()">Add</button>
+    </div>
+
+    <!-- Wishlist Container -->
+    <div class="wishlist-container">
+        <h3>Your Wishlist</h3>
+        <div id="wishlist"></div>
+    </div>
+
+    <script>
+        // Load Wishlist from Local Storage
+        document.addEventListener("DOMContentLoaded", loadWishlist);
+
+        function addToWishlist() {
+            let destinationInput = document.getElementById("destination");
+            let destination = destinationInput.value.trim();
+            if (destination === "") return;
+
+            let wishlist = getWishlist();
+            wishlist.push(destination);
+            saveWishlist(wishlist);
+            renderWishlist();
+            destinationInput.value = "";
+        }
+
+        function removeFromWishlist(index) {
+            let wishlist = getWishlist();
+            wishlist.splice(index, 1);
+            saveWishlist(wishlist);
+            renderWishlist();
+        }
+
+        function getWishlist() {
+            return JSON.parse(localStorage.getItem("wishlist")) || [];
+        }
+
+        function saveWishlist(wishlist) {
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        }
+
+        function renderWishlist() {
+            let wishlist = getWishlist();
+            let wishlistContainer = document.getElementById("wishlist");
+            wishlistContainer.innerHTML = "";
+
+            wishlist.forEach((destination, index) => {
+                let item = document.createElement("div");
+                item.classList.add("wishlist-item");
+                item.innerHTML = `
+                    <span>${destination}</span>
+                    <button class="remove-btn" onclick="removeFromWishlist(${index})">Remove</button>
+                `;
+                wishlistContainer.appendChild(item);
+            });
+        }
+
+        function loadWishlist() {
+            renderWishlist();
+        }
+    </script>
+
+</body>
+</html>

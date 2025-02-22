@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking - #Next Stop</title>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/Assets/css/hotel.css"> 
+    <link rel="shortcut icon" href="../Assets/logos/N (3).png" type="image/x-icon">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo"><img src="../Assets/logos/N (3).png" alt="Logo"></div>
+        <div class="nav-bar-elements"><a href="../index.html"><img src="../Assets/logos/home_738822.png" alt=""><span>Home</span></a></div>
+        <div class="nav-bar-elements"><a href="TravelHistory.html"><img src="../Assets/logos/compass_18752443.png" alt=""><span>Trips</span></a></div>
+        <div class="nav-bar-elements"><a href="Travel.html"><img src="../Assets/logos/forum_16705870.png" alt=""><span>Travel Stories</span></a></div>
+        <div class="nav-bar-elements search-bar">
+            <input type="search" id="search-bar" placeholder="Search...">
+            <img src="../Assets/logos/magnifying-glass_5844467.png" alt="Search Icon">
+        </div>
+        <div class="nav-bar-elements"><a href="login.html" class="auth-button">Sign In</a><a href="signup.html" class="auth-button">Sign Up</a></div>
+    </nav>
+
+    <div id="homepage-img-background"></div>
+
+    <main id="hotel-booking">
+        <h1>Find Your Stay</h1>
+        <div class="booking-form">
+            <label for="location">Location:</label>
+            <input type="text" id="location" placeholder="Enter city or hotel name">
+
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin">
+
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout">
+
+            <button id="search-hotels">Search Hotels</button>
+        </div>
+        <div id="hotel-results"></div>
+    </main>
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePaymentModal()">&times;</span>
+            <h2>Payment Details</h2>
+            <div id="payment-details"></div>
+            
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="16">
+    
+            <label for="card-expiry">Expiry (MM/YY):</label>
+            <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5">
+    
+            <label for="card-cvv">CVV:</label>
+            <input type="text" id="card-cvv" placeholder="123" maxlength="3">
+    
+            <button id="confirm-payment">Confirm Payment</button>
+        </div>
+    </div>
+
+    <script src="/Assets/js/hotel.js"></script>
+</body>
+</html>

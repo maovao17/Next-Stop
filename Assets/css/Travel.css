@@ -1,0 +1,73 @@
+
+
+/* Header */
+header {
+    text-align: center;
+    padding: 100px 20px 20px;
+    background: url('/Assets/Images/clean-2721103_1280.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Story Container */
+#story-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+}
+
+/* Story Card */
+.story-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.story-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.story-card h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #b71c1c;
+}
+
+.story-card p {
+    font-size: 1em;
+    color: #333;
+}
+
+.story-card:hover {
+    transform: scale(1.05);
+}
+
+/* Read More Button */
+.read-more {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.read-more:hover {
+    background-color: #b71c1c;
+}

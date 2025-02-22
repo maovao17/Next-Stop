@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cab Booking - #Next Stop</title>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="/style.css"> 
+    <link rel="stylesheet" href="/Assets/css/cab.css">
+    <link rel="shortcut icon" href="/Assets/logos/N (3).png" type="image/x-icon">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo"><img src="../Assets/logos/N (3).png" alt="Logo"></div>
+        <div class="nav-bar-elements"><a href="../index.html"><img src="../Assets/logos/home_738822.png" alt=""><span>Home</span></a></div>
+        <div class="nav-bar-elements"><a href="TravelHistory.html"><img src="../Assets/logos/compass_18752443.png" alt=""><span>Trips</span></a></div>
+        <div class="nav-bar-elements"><a href="Travel.html"><img src="../Assets/logos/forum_16705870.png" alt=""><span>Travel Stories</span></a></div>
+        <div class="nav-bar-elements search-bar">
+            <input type="search" id="search-bar" placeholder="Search...">
+            <img src="../Assets/logos/magnifying-glass_5844467.png" alt="Search Icon">
+        </div>
+        <div class="nav-bar-elements"><a href="login.html" class="auth-button">Sign In</a><a href="signup.html" class="auth-button">Sign Up</a></div>
+    </nav>
+
+    <div id="homepage-img-background"></div>
+
+    <main id="cab-booking">
+        <h1>Book Your Ride</h1>
+        <div class="booking-form">
+            <label for="pickup">Pickup Location:</label>
+            <input type="text" id="pickup" placeholder="Enter pickup location">
+
+            <label for="dropoff">Drop-off Location:</label>
+            <input type="text" id="dropoff" placeholder="Enter drop-off location">
+
+            <label for="date">Pickup Date:</label>
+            <input type="date" id="date">
+
+            <button id="search-cabs">Find Cabs</button>
+        </div>
+        <div id="cab-results"></div>
+    </main>
+
+    <script src="/Assets/js/cab.js"></script>
+</body>
+</html>
+
+

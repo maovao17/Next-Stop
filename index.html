@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Stop - #GoTravel A Little More</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/Assets/logos/N (3).png" type="image/x-icon">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="logo"><img src="Assets/logos/N (3).png" alt="Logo"></div>
+        <div class="nav-bar-elements">
+            <a href="/index.html">
+                <img src="Assets/logos/home_738822.png" alt="">
+                <span>Home</span>
+            </a>
+        </div>
+        <div class="nav-bar-elements">
+            <a href="/Pages/TravelHistory.html">
+                <img src="Assets/logos/compass_18752443.png" alt="">
+                <span>Trips</span>
+            </a>
+        </div>
+        <div class="nav-bar-elements">
+            <a href="/Pages/Travel.html">
+                <img src="Assets/logos/forum_16705870.png" alt="">
+                <span>Travel Stories</span>
+            </a>
+        </div>
+        <div class="nav-bar-elements search-bar">
+            <input type="search" id="search-bar" placeholder="Search...">
+            <img src="Assets/logos/magnifying-glass_5844467.png" alt="Search Icon">
+        </div>
+       
+<div class="nav-bar-elements user-menu" id="profile-section" style="display: none;">
+    <span id="welcome-user"></span>
+    <div class="dropdown">
+        <button class="dropdown-btn">Profile ▼</button>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <a href="/Pages/help.html">Help & Support</a>
+            <a href="/Pages/wishlist.html">Wishlist</a>
+            <a href="/Pages/wallet.html">Wallet</a>
+            <a href="/Pages/setting.html">Settings</a>
+            <a href="#" id="logout-btn">Logout</a>
+        </div>
+    </div>
+</div>
+
+        <div class="nav-bar-elements">
+            <a href="/Pages/login.html" class="auth-button">Sign In</a>
+            <a href="/Pages/signup.html" class="auth-button">Sign Up</a>
+        </div>
+    </nav>
+    
+    <!-- Transport Modules -->
+    <div id="transport-modules">
+        <div class="transport">
+            <img src="Assets/logos/bus.png" alt="Bus">
+            <a href="/Pages/bus.html">Bus</a>
+        </div>
+        <div class="transport">
+            <img src="Assets/logos/train.png" alt="Train">
+            <a href="/Pages/train.html">Train</a>
+        </div>
+        <div class="transport">
+            <img src="Assets/logos/flight.png" alt="Flight">
+            <a href="/Pages/flight.html">Flight</a>
+        </div>
+        <div class="transport">
+            <img src="Assets/logos/hotel.png" alt="Hotels">
+            <a href="/Pages/hotel.html">Hotels</a>
+        </div>
+        <div class="transport">
+            <img src="Assets/logos/cab.png" alt="Cab Services">
+            <a href="/Pages/cab.html">Cab</a>
+        </div>
+        <div class="transport">
+            <img src="/Assets/logos/letter-p.png" alt="PNR Status">
+            <a href="/Pages/pnrstatus.html">PNR Status</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="homepage-img-background"></div>
+    
+    <main>
+        
+        <div class="collections-container">
+            <h2>Handpicked Collections for You</h2>
+            <div class="collections-wrapper">
+                <button class="scroll-btn left" onclick="scrollLeft()">&#10094;</button>
+                <div class="collections" id="collections">
+                    <div class="card">
+                        <img src="/Assets/Images/delhi.jpg" alt="Delhi">
+                        <p>Stays in & Around Delhi for a Weekend Getaway</p>
+                    </div>
+                    <div class="card">
+                        <img src="/Assets/Images/mumbai.jpg" alt="Mumbai">
+                        <p>Stays in & Around Mumbai for a Weekend Getaway</p>
+                    </div>
+                    <div class="card">
+                        <img src="/Assets/Images/bengalru.jpg" alt="Bangalore">
+                        <p>Stays in & Around Bangalore for a Weekend Getaway</p>
+                    </div>
+                    <div class="card">
+                        <img src="/Assets/Images/beach.jpg" alt="Beach">
+                        <p>Beach Destinations</p>
+                    </div>
+                    <div class="card">
+                        <img src="/Assets/Images/weekend.jpg" alt="Weekend">    
+                        <p>Weekend Getaways</p>
+                    </div>
+                    <div class="card">
+                        <img src="/Assets/Images/hill.jpg" alt="Hills">
+                        <p>Hill Stations</p>
+                    </div>
+                </div>
+                <button class="scroll-btn right" onclick="scrollRight()">&#10095;</button>
+            </div>
+        </div>
+    
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Company</h3>
+                <a href="/Pages/aboutus.html">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div class="footer-section" id="social-media">
+                <h3>Follow Us</h3>
+                <a href="#"><img src="Assets/logos/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="Assets/logos/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="Assets/logos/x.png" alt="Twitter"></a>
+            </div>
+        </div>
+        <p>&copy; 2025 Next Stop. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Next Stop</title>
+    <link rel="shortcut icon" href="/Assets/logos/N (3).png" type="image/x-icon">
+    <link rel="stylesheet" href="/Assets/css/signup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-form">
+            <h2>Create an Account</h2>
+            <form id="signup-form">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Contact Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                </div>
+
+                <button type="submit" class="signup-button">Sign Up</button>
+
+                <p id="success-message" class="success-message"></p>
+
+                <div class="google-signup">
+                    <button type="button" class="google-button" id="google-signup">
+                        <img src="/Assets/logos/google.png" alt="Google Logo"> Sign up with Google
+                    </button>
+                </div>
+
+                <p>Already have an account? <a href="login.html">Sign In</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="/Assets/js/signup.js"></script>
+</body>
+</html>

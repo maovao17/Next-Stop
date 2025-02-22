@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Module</title>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/Assets/logos/N (3).png" type="image/x-icon">
+    <style>
+        /* General Styling */
+       
+        h1 {
+            color: #b71c1c;
+        }
+
+        .settings-container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .setting-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            background: #ffebee;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        select, button {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+
+        .dark-mode .settings-container {
+            background: #333;
+            color: white;
+        }
+
+        .dark-mode .setting-option {
+            background: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>⚙️ Settings</h1>
+
+    <div class="settings-container">
+        <h3>Preferences</h3>
+
+        <!-- Dark Mode Toggle -->
+        <div class="setting-option">
+            <span>Dark Mode</span>
+            <button onclick="toggleDarkMode()">Toggle</button>
+        </div>
+
+        <!-- Font Size Selection -->
+        <div class="setting-option">
+            <span>Font Size</span>
+            <select id="fontSizeSelector" onchange="changeFontSize()">
+                <option value="16px">Default</option>
+                <option value="18px">Large</option>
+                <option value="20px">Extra Large</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        // Load settings from Local Storage
+        document.addEventListener("DOMContentLoaded", loadSettings);
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            let isDarkMode = document.body.classList.contains("dark-mode");
+            localStorage.setItem("darkMode", isDarkMode);
+        }
+
+        function changeFontSize() {
+            let fontSize = document.getElementById("fontSizeSelector").value;
+            document.body.style.fontSize = fontSize;
+            localStorage.setItem("fontSize", fontSize);
+        }
+
+        function loadSettings() {
+            // Load dark mode setting
+            if (localStorage.getItem("darkMode") === "true") {
+                document.body.classList.add("dark-mode");
+            }
+
+            // Load font size setting
+            let savedFontSize = localStorage.getItem("fontSize");
+            if (savedFontSize) {
+                document.body.style.fontSize = savedFontSize;
+                document.getElementById("fontSizeSelector").value = savedFontSize;
+            }
+        }
+    </script>
+
+</body>
+</html>

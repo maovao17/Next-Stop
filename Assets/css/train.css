@@ -1,0 +1,61 @@
+/* Train Page Specific Styles */
+#train-booking {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    width: 50%;
+}
+
+#train-booking h1 {
+    color: #b71c1c;
+    font-size: 24px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.booking-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.booking-form input, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.booking-form button {
+    background-color: #d32f2f;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.booking-form button:hover {
+    background-color: #b71c1c;
+}
+
+#train-results {
+    margin-top: 20px;
+    text-align: left;
+}
+.modal { 
+    display: none; position: fixed; top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+    background: rgba(179, 0, 0, 0.928); padding: 20px; border-radius: 10px; 
+    box-shadow: 0 0 10px black; 
+}
+.modal-content { text-align: center; }
+.modal input { display: block; margin: 10px auto; padding: 5px; width: 80%; }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNR Status Check - Next Stop</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/Assets/logos/N (3).png" type="image/x-icon">
+    <script src="/script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(/Assets/Images/hill.jpg);
+            text-align: center;
+        }
+        
+        .container {
+            margin: 200px auto;
+            padding: 20px;
+            background: white;
+            width: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #a81919;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d32222;
+        }
+        #statusResult {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo"><img src="/Assets/logos/N (3).png" alt="Logo"></div>
+        <div class="nav-bar-elements">
+            <a href="/index.html">
+                <img src="/Assets/logos/home_738822.png" alt="">
+                <span>Home</span>
+            </a>
+        </div>
+        <div class="nav-bar-elements">
+            <a href="/Pages/TravelHistory.html">
+                <img src="/Assets/logos/compass_18752443.png" alt="">
+                <span>Trips</span>
+            </a>
+        </div>
+        <div class="nav-bar-elements">
+            <a href="/Pages/Travel.html">
+                <img src="/Assets/logos/forum_16705870.png" alt="">
+                <span>Travel Stories</span>
+            </a>
+        </div>
+        <div class="nav-bar-elements search-bar">
+            <input type="search" id="search-bar" placeholder="Search...">
+            <img src="/Assets/logos/magnifying-glass_5844467.png" alt="Search Icon">
+        </div>
+       
+<div class="nav-bar-elements user-menu" id="profile-section" style="display: none;">
+    <span id="welcome-user"></span>
+    <div class="dropdown">
+        <button class="dropdown-btn">Profile ▼</button>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <a href="/Pages/help.html">Help & Support</a>
+            <a href="/Pages/wishlist.html">Wishlist</a>
+            <a href="/Pages/wallet.html">Wallet</a>
+            <a href="/Pages/setting.html">Settings</a>
+            <a href="#" id="logout-btn">Logout</a>
+        </div>
+    </div>
+</div>
+
+        <div class="nav-bar-elements">
+            <a href="/Pages/login.html" class="auth-button">Sign In</a>
+            <a href="/Pages/signup.html" class="auth-button">Sign Up</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Check PNR Status</h2>
+        <label for="pnrType">Select Type:</label>
+        <select id="pnrType">
+            <option value="train">Train PNR</option>
+            <option value="flight">Flight PNR</option>
+        </select>
+        <input type="text" id="pnrInput" placeholder="Enter PNR Number" maxlength="10">
+        <button onclick="checkPNR()">Check Status</button>
+        <div id="statusResult"></div>
+    </div>
+    <script>
+        function checkPNR() {
+            const pnrType = document.getElementById("pnrType").value;
+            const pnrNumber = document.getElementById("pnrInput").value;
+            const resultDiv = document.getElementById("statusResult");
+            
+            if (pnrNumber.length < 6) {
+                resultDiv.innerHTML = "Please enter a valid PNR number.";
+                resultDiv.style.color = "red";
+                return;
+            }
+            
+            // Simulating a response (Replace with actual API call in production)
+            setTimeout(() => {
+                let status = Math.random() > 0.5 ? "Confirmed" : "Waitlisted";
+                resultDiv.innerHTML = `${pnrType.toUpperCase()} PNR ${pnrNumber} Status: <strong>${status}</strong>`;
+                resultDiv.style.color = status === "Confirmed" ? "green" : "orange";
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

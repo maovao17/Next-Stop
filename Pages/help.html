@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - Next Stop</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/Assets/logos/N (3).png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 20px;
+            background: #b71c1c;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+        }
+        .faq {
+            width: 60%;
+            margin: 20px auto;
+            text-align: left;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .faq h2 {
+            text-align: center;
+            color: #b71c1c;
+        }
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .faq-question {
+            width: 100%;
+            padding: 12px;
+            background: #d32f2f;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-size: 16px;
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .faq-question:hover {
+            background: #b71c1c;
+        }
+        .faq-answer {
+            display: none;
+            padding: 12px;
+            background: #fff3f3;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .contact-form {
+            width: 60%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .contact-form h2 {
+            color: #b71c1c;
+        }
+        input, textarea {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 12px 20px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #b71c1c;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo"><img src="/Assets/logos/N (3).png" alt="Logo"></div>
+        <div class="nav-bar-elements">
+            <a href="/index.html">
+                <img src="/Assets/logos/home_738822.png" alt="">
+                <span>Home</span>
+            </a>
+        </div>
+        <div class="nav-bar-elements">
+            <a href="/Pages/TravelHistory.html">
+                <img src="/Assets/logos/compass_18752443.png" alt="">
+                <span>Trips</span>
+            </a>
+        </div>
+        <div class="nav-bar-elements">
+            <a href="/Pages/Travel.html">
+                <img src="/Assets/logos/forum_16705870.png" alt="">
+                <span>Travel Stories</span>
+            </a>
+        </div>
+    </nav>
+    
+    <header>
+        <h1>Help & Support</h1>
+        <p>Find answers to common questions or contact us for further assistance.</p>
+    </header>
+    
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <button class="faq-question">How do I book a ticket? <span>+</span></button>
+            <div class="faq-answer">You can book a ticket by navigating to the respective transport page and selecting your journey details.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What payment methods do you accept? <span>+</span></button>
+            <div class="faq-answer">We accept credit/debit cards, net banking, UPI, and digital wallets.</div>
+        </div>
+    </section>
+    
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="support-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <p id="form-response"></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Next Stop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
